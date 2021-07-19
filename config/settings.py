@@ -44,7 +44,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = ["django_countries", "django_seed", "storages"]
+THIRD_PARTY_APPS = ["django_countries", "django_seed", "django_storages"]
 
 PROJECT_APPS = [
     "core.apps.CoreConfig",
@@ -192,9 +192,8 @@ if not DEBUG:
     AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
     AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
     AWS_STORAGE_BUCKET_NAME = "airbnb-clone-horoli"
-
     AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.ap-northeast-2.amazonaws.com"
-    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
 
     sentry_sdk.init(
         dsn=os.environ.get("SENTRY_URL"),
