@@ -13,6 +13,8 @@ django-countries = "*"
 requests = "*"
 psycopg2 = "*"
 sentry-sdk = "==0.13.2"
+django-storages = "*"
+boto3 = "*"
 
 [dev-packages]
 awsebcli = "*"
